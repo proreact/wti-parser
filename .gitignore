@@ -9,9 +9,10 @@ coverage
 # Example data
 wti_config.json
 
-
 # Data generated in tests
 test/test_sandbox
 
 # Optional npm cache directory
 .npm
+
+.npmrc
