@@ -21,12 +21,9 @@ module.exports = {
       })
     }
 
-    const masterId = files.find((f) => f.master_project_file_id === null).id
-
-    files =
-      locales.length > 0
-        ? files.filter((f) => locales.includes(f.locale_code))
-        : files.filter((f) => f.id !== masterId)
+    if (locales.length > 0) {
+      files = files.filter((f) => locales.includes(f.locale_code))
+    }
 
     let spinners = {}
 
@@ -38,7 +35,7 @@ module.exports = {
 
       let result
       try {
-        result = await Utils.get(`/files/${masterId}/locales/${file.locale_code}`)
+        result = await Utils.get(`/files/${file.id}/locales/${file.locale_code}`)
       } catch {
         spinners[file.locale_code].fail()
         console.log(`Failed to pull results for ${file.name}`)
