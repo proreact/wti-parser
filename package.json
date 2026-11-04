@@ -1,6 +1,6 @@
 {
   "name": "@proreact/wti-parser",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "A WebTranslateIt Syncronization tool build with Javascript with support for multiple projects",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "prettier": "prettier ."
   },
   "bin": {
-    "wti-parser": "./bin/cli.js"
+    "wti-parser": "bin/cli.js"
   },
   "author": "Cosmin Lupu <clu@proreact.dk>",
   "license": "GPL",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/proreact/wti-parser.git"
+    "url": "git+https://github.com/proreact/wti-parser.git"
   },
   "bugs": {
     "url": "https://github.com/proreact/wti-parser/issues"
